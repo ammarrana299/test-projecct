@@ -18,12 +18,7 @@
 
   <div class="field">
     <%= form.label :post_type %>
-    <%#= form.number_field :post_type,value: Post.post_types.keys %>
     <%= form.select(:post_type, Post.post_types.keys.to_a, {:include_blank => "Select"}, {:class => "form-control selector-value seller-selector"} )%>
-  </div>
-
-  <div class="field">
-    <%= form.hidden_field :user_id, value: current_user.id%>
   </div>
 
   <div class="actions">
